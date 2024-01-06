@@ -10,15 +10,17 @@ const Navbar = () => {
   const [nav, setNav]= useState(false)
   const handleClick =() => setNav(!nav)
   return (
-    <div className='fixed w-full h-[100px] flex justify-between items-center px-8 bg-[#020617]   text-gray-300'>
-           <div>
-            <img src={logo} alt="logo" style={{width: '160px'}} />
-           </div>
-           {/*Menu*/}
+    <div  className='fixed w-full h-[100px] flex justify-between items-center px-8 bg-[#000000] bg-opacity-40  text-gray-300'>
            
-            <ul className=' md: flex text-2xl px-8 '>
-              <li className=" hover:text-pink-600  hover:font-bold px-8" >
-              <Link  to="home"  smooth={true} offset={50} duration={500}>
+         
+               <div className='ml-0'>
+                 <img src={logo} alt="logo" style={{width: '220px', height:'200px'}} />
+               </div>
+                    {/*Menu*/}
+           
+                <ul className=' md: flex text-2xl px-8 '>
+                  <li className=" hover:text-pink-600  hover:font-bold px-8" >
+                 <Link  to="home"  smooth={true} offset={50} duration={500}>
                        Home
                    </Link>
               </li>
@@ -43,7 +45,7 @@ const Navbar = () => {
                    </Link>
               </li>
             </ul>
-          
+         
            {/*Hamburger*/}
            <div onClick={handleClick} className="md:hidden z-10 ">
                 {!nav ? <FaBars /> :<FaTimes />}
@@ -64,15 +66,22 @@ const Navbar = () => {
                 Linkedin<FaLinkedin size="30px"></FaLinkedin></a></li>
               
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333]'>
-                <a href="https://github.com/Aashika2002"  className='flex justify-between items-center w-full text-white '>Github<FaGithub size="30px"  ></FaGithub></a></li>
+                <a href="https://github.com/Aashika2002"  className='flex justify-between items-center w-full text-white' >Github<FaGithub size="30px"  ></FaGithub></a></li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#f538a3]'>
                 <a href="https://www.instagram.com/__aashika.jainn/?hl=en" className='flex justify-between items-center w-full text-white ' >Instagram<FaInstagram size="40px"></FaInstagram></a></li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                <a href="aashikajain1326@gmail.com" className='flex justify-between items-center w-full text-white '>G-Mail<HiOutlineMail size="40px"></HiOutlineMail></a></li>
+                <a href="aashikajain1326@gmail.com" target="_blank" className='flex justify-between items-center w-full text-white '>G-Mail<HiOutlineMail size="40px"></HiOutlineMail></a></li>
             </ul>
           
-             
+            <div className="hidden lg:flex fixed flex-col top-[35%] right-0  "  >
+            <a href ="https://quotefancy.com/" >
+            <button  style={{ writingMode: 'vertical-rl' } }
+            className ='text-white bg-pink-600  h-60 rotate-180 w-7 px-7 py-4 my-4 pb-2 ml-[-10px] hover:bg-sky-700 hover:ml-[-100px]  duration-300 hover:font-semibold text-2xl'>View More
+            </button>
+            </a>
            </div>
+           </div>
+           
            
         </div>
     

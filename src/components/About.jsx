@@ -1,8 +1,10 @@
 import React from 'react'
+import Back2 from '../assets/bg2.jpg'
+
 
 const About = () => {
   return (
-    <div name='about' className=' flex justify-center items-center w-full min-h-screen bg-[#0a192f] text-gray-300 '>
+    <div name='about' className=' flex justify-center items-center w-full min-h-screen text-gray-300' style={{ backgroundImage: `url(${Back2})`, backgroundSize: "cover",backgroundRepeat: "no-repeat",}}  >
       <div className=' flex flex-col justify-center items-center w-full h-full'>
         
                <div className='sm:text-right pb-8 pl-4'>
@@ -13,7 +15,9 @@ const About = () => {
         <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-2'>
             <div className='sm:text-right text-4xl font-bold'>
                     <p>
+                     
                         Hi. I'm Aashika ,Nice to meet you.Please take a look around.
+                      
                     </p>
             </div>
             
@@ -26,6 +30,8 @@ const About = () => {
             
          
       </div>
+     
+          
     </div>
   )
 }
